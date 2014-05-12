@@ -1,4 +1,6 @@
-## forEach Loop in Native JavaScript {#foreachloopinnativejavascript}
+# Breaking Bad Loops in JavaScript Libraries)
+
+## forEach Loop in Native JavaScript
 
 JavaScript Libraries are important (e.g., jQuery, Lo-Dash, Underscore), but in
 the case of functional loops
@@ -20,7 +22,7 @@ that has no function/iterators.
 
 However, in Lo-Dash and jQuery similar code breaks the loops!
 
-## Breaking each Loop in Lo-Dash {#breakingeachloopinlo-dash}
+## Breaking each Loop in Lo-Dash
 
 The Lo-Dash code with `each` produces only **one alert**:
 
@@ -31,7 +33,7 @@ The Lo-Dash code with `each` produces only **one alert**:
 
 Try the above Lo-Dash code yourself in [JSFiddle][2].
 
-## Breaking each Loop in jQuery {#breakingeachloopinjquery}
+## Breaking each Loop in jQuery
 
 Likewise, the jQuery `each` example shows only the first alert:
 
@@ -42,15 +44,13 @@ Likewise, the jQuery `each` example shows only the first alert:
 
 Try the jQuery code yourself in [JSFiddle][3].
 
-## Non-Breaking each Loop in Underscore.js {#non-breakingeachloopinunderscore.
-js
-}
+## Non-Breaking each Loop in Underscore.js
 
 To complicate the matter, Underscore.js and Backbone.js remain true to the
 native JavaScript interpretation.
 
-The Underscore.js `each` example that iterates through the each item and **
-doesn’t break**:
+The Underscore.js `each` example that iterates through the each item and
+**doesn’t break**:
 
     _.each([1,2],function(v){
       alert(v);
@@ -59,9 +59,7 @@ doesn’t break**:
 
 Try the Underscore `each` method in [JSFiddle][4].
 
-## Non-Breaking forEach Loop in Underscore.js {#non-
-breakingforeachloopinunderscore.js
-}
+## Non-Breaking forEach Loop in Underscore.js
 
 Just for the sake of it, the Underscore `forEach()` was tested. It reliably
 produced the results similar to the native`forEach()`: **two alerts!**
@@ -75,19 +73,16 @@ The Underscore `forEach()` code:
 
 Try the Underscrore.js `forEach()` code yourself at [JSFiddle][5].
 
-## The Code-Breaking Difference Between Lo-Dash and Underscore {#thecode-
-breakingdifferencebetweenlo-dashandunderscore
-}
+## The Code-Breaking Difference Between Lo-Dash and Underscore
 
-The conclusion of this brief post is that **Lo-Dash is not equal to Underscore
-**, unless a special underscore-compatible version is being used. This was
-kindly pointed out to me by John-David Dalton (@jdalton
-):
+The conclusion of this brief post is that
+**Lo-Dash is not equal to Underscore**,
+unless a special underscore-compatible version is being used. This was
+kindly pointed out to me by John-David Dalton (@jdalton):
 
 > [@azat_co][6] Right Lo-Dash isn't a drop-in unless you use the Lo-Dash.
 > underscore.js build (it's linked to on the homepage). Also in cdnjs.
 >
-> 
 > — John-David Dalton (@jdalton) [November 22, 2013][7]
 
 PS: Underscore.js `forEach` is more browser compatible than native `forEach`
