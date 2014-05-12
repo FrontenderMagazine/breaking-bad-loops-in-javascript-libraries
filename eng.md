@@ -1,5 +1,15 @@
 # Breaking Bad Loops in JavaScript Libraries)
 
+It was sort of a surprise for me when I discovered inconsistencies in the most
+popular JavaScript libraries in how they handle their each and forEach loops.
+This post compares:
+
+- forEach Loop in Native JavaScript
+- each Loop in Lo-Dash
+- each Loop in jQuery
+- each Loop in Underscore.js
+- forEach Loop in Underscore.js
+
 ## forEach Loop in Native JavaScript
 
 JavaScript Libraries are important (e.g., jQuery, Lo-Dash, Underscore), but in
